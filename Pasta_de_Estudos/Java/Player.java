@@ -125,10 +125,10 @@ public class Player {
     }
     // --------------------------------------------------------------------
 
-    private void esperaResultado() {
+    public static void esperaResultado(){
         for (int x = 1; x > 3; x++) {
             try {
-                TimeUnit.SECONDS.sleep(1);
+                TimeUnit.SECONDS.sleep(tempo);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
