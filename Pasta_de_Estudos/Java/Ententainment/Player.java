@@ -128,7 +128,7 @@ public class Player {
     public static void esperaResultado(){
         for (int x = 1; x > 3; x++) {
             try {
-                TimeUnit.SECONDS.sleep(tempo);
+                TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
