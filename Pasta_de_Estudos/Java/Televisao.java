@@ -1,59 +1,48 @@
-import Ententainment.Game;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
-public class Televisao{
-    boolean ligada;
-    int volume;
-    int canal;
+public class Televisao {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numLogs = Integer.parseInt(scanner.nextLine());
 
-    public Televisao(){
-        ligada = false;
-        volume = 0;
-        canal = 0;
-    }
+        Map<String, Integer> logCounts = new HashMap<>();
+        String maiorServico = null;
+        String menorServico = null;
+        int maiorQuantidade = Integer.MIN_VALUE;
+        int menorQuantidade = Integer.MAX_VALUE;
 
-    public void status(){
-        System.out.println("Volume: " + volume + "\nCanal Atual: " + canal);
-        Game.espera(1);
-    }
-    public void diminuirVolume(){
-        if(!(ligada && volume == 0)){
-            System.out.println("Houve um Problema:\n    → Verifique se o Dispositivo está ligado");
-            System.out.println("    → Verifique se o Volume já está no zero");
-            Game.espera(5);
-        } else {
-            volume -= 1;
-            System.out.println("\nVolume Diminuído");
-            Game.espera(1);
-        }
-    }
-    public void trocarCanal(int escolhacanal){
-        if (ligada){
-        System.out.println("Trocando para o canal Nº" + (escolhacanal));
-        for(int x = 0; x<2; x++){
-                Game.espera(1);
-                System.out.print(".");
-        }
-        canal = escolhacanal;
-        System.out.println("Canal trocado!! Canal Atual: " + canal);
-    } else {
-        
-    }
-}
+        for (int i = 0; i < numLogs; i++) {
+            String logEntry = scanner.nextLine();
+            String[] parts = logEntry.split(",");
+            String servico = parts[1].trim();
 
-    public void ligar(){
-        if(ligada){
-            System.out.println("Desligando");
-            for(int x = 0; x<2; x++){
-                Game.espera(1);
-                System.out.print(".");
+            // Atualiza a contagem para o serviço
+            logCounts.put(servico, logCounts.getOrDefault(servico, 0) + 1);
+
+            // Verifica se é o maior ou menor até agora
+            int quantidadeAtual = logCounts.get(servico);
+            if (quantidadeAtual > maiorQuantidade) {
+                maiorQuantidade = quantidadeAtual;
+                maiorServico = servico;
+            } else if (quantidadeAtual < menorQuantidade) {
+                menorQuantidade = quantidadeAtual;
+                menorServico = servico;
             }
-            System.out.println("Desligado!");
-            ligada = false;
-            Game.espera(1);
-        } else {
-            System.out.println("Ligada!");
-            ligada = true;
-            Game.espera(1);
+            if (quantidadeAtual <= menorQuantidade) {
+                menorQuantidade = quantidadeAtual;
+                menorServico = servico;
+            }
         }
+
+        System.out.println("Eventos por servico:");
+        for (Map.Entry<String, Integer> entry : logCounts.entrySet()) {
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
+
+        System.out.println("Maior:" + maiorServico);
+        System.out.println("Menor:" + menorServico);
+        scanner.close();
     }
 }

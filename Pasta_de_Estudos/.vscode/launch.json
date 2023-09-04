@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Televisao",
+            "request": "launch",
+            "mainClass": "Televisao",
+            "projectName": "Pasta_de_Estudos_7272eeb5"
+        },
+        {
+            "type": "java",
             "name": "Treinamento",
             "request": "launch",
             "mainClass": "Treinamento",
