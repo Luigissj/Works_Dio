@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "testeSingleton",
+            "request": "launch",
+            "mainClass": "testeSingleton",
+            "projectName": "Pasta_de_Estudos_7272eeb5"
+        },
+        {
+            "type": "java",
+            "name": "Testes",
+            "request": "launch",
+            "mainClass": "Testes",
+            "projectName": "Pasta_de_Estudos_7272eeb5"
+        },
+        {
+            "type": "java",
             "name": "Televisao",
             "request": "launch",
             "mainClass": "Televisao",

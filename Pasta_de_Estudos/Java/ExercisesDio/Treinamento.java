@@ -1,3 +1,4 @@
+package ExercisesDio;
 import java.util.Random;
 
 public class Treinamento {
