@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <!--Trazendo o CSS para meu Código-->
+    <link rel="stylesheet" href="Primeiro.css"></link>
+</head>
+<body>
+    <!--Tag Para a música de Fundo-->
+    <audio src="Audios/Super Mario Bros. - Running About.mp3" autoplay loop id="somDeFundo">
+    </audio>
+    <!--Div para o Corpo do site-->
+    <div id="site" class="conteiner">
+        <!--Corpo do Site-->
+        <button id="sobre-mim" onclick="sobreMim()">Sobre Mim</button>
+        <button id="formacao" onclick="formacao()">Formação e idiomas</button>
+        <button id="portfolio" onclick= "portfolio()"><a id="downloadPortfolio"> Portfólio</a></button>
+        <button id="contatos" onclick="contatos()">Contatos</button>
+        <h1 id="base"></h1>
+        <img src="Imagens/Luigi.png" alt="" id="imagemSobreMim">
+        <img src="Imagens/Ring - Sonic.gif" alt="" id="pontos">
+        <p id="pontosDigitos">0</p>
+        <img src="Imagens/Mario.gif" alt="" id="icone" onclick="mudarFundoBotoes()" title="Mario">
+        <h3 id="titulo">Tudo sobre esse Portfólio - Luigi Giampaoli</h3>
+        <p id="texto">Ola indivíduo que está observando esse site, meu nome, como 
+        mostrado, é Luigi Giampaoli, e busco fazer esse site com o objetivo de mostrar 
+        minhas habilidades de programação web e, consequentemente, informaões sobre mim, 
+        desde: formações acadêmicas, idiomas, experiência profissional; além de 
+        possibilitar para download meu portfólio, podendo escolher entre português e inglês 
+        e se quiser fazer contatos comigo, há o botão de 'Contatos' para podermos trocar 
+        assuntos e ideias. Portanto, vou mostrar alguns detalhes que fiz nesse site que 
+        pode achar interessante e que demonstram-me como um bom programador:</p>
+        <h4 id="meuIcone">Meu Icone: </h4>
+        <p id="infoMeuIcone">Se clicar no meu ícone, ele vai fazer alguma coisa 
+        dependendo do mapa que tiver. Por exemplo, você começa no mapa de "Super Mario 
+        Bros"(Role para baixo para poder ver a primeira fase do Mario), portanto se 
+        clicar no meu ícone, irá receber uma quantidade de pontos até receber o "1 UP"</p>
+        <h4 id="trocarFundo">Troca de Imagens: </h4>
+        <p id="infoTrocarFundo">Ao clicar o botão do personagem (Canto Superior 
+        Direito), o fundo do site e dos botões irão trocar por outras imagens ou cores, 
+        fazendo com que, consequentemente, a função do 'Meu ícone' mude também;</p>
+        <h3 id="titulo2">Um resumo rapido sobre os botões acima</h3>
+        <p id="legenda">Legenda: <br> ◙:Básico; <br> ◙◙:Mais que o Básico; <br> 
+        ◙◙◙:Intermediário; <br> ◙◙◙◙:Mais que o Intermediário; <br> ◙◙◙◙◙:Profissional/Fluente</p>
+        <table>
+            <ul id="tabelaBotoes" class="conteiner2">
+                <p id="listaSobreMim">Sobre Mim: </p>
+                <p id="listaFormacao">Formação: </p>
+                <p id="listaPortfolio">Portfólio: </p>
+                <p id="listaContatos">Contatos: </p>
+                <li id="listaInfoSobreMim">Exibe dados sobre o criador;</li>
+                <li id="listaInfoFormacao">Mostra formação acadêmica, 
+                experiência profissional e idiomas do criador</li>
+                <li id="listaInfoPortfolio">Possibilita baixar o portfolio do criador;</li>
+                <li id="listaInfoContatos">Demonstra meios de comunicação do criador;</li>
+            </ul>
+        </table> 
+        <!-- Meu ícone-->
+        <img src="Imagens/Eu.jpg" alt="" id="Eu" onclick="tocarSom()" title="EU - Luigi Giampaoli">
+        <!--Botões Modificadores-->
+        <button id="botao1" onclick="mudarFundoBotao1()">1</button>
+        <button id="botao2" onclick="mudarFundoBotao2()">2</button>
+        <button id="botao3" onclick="mudarFundoBotao3()">3</button>
+    </div>
+    <!--Trazendo o Javascript para o meu Código-->
+    <script src="Primeiro.js"> </script>
+</body>
+</html>

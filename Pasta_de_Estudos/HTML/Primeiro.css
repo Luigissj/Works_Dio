@@ -1,0 +1,329 @@
+/*Fazendo grades para meus programas*/
+.conteiner{display: grid;
+            grid-template-rows: repeat(25, 50px);
+            grid-template-columns: repeat(35, 50px);
+ }
+ 
+ .conteiner2{display: grid;
+     grid-template-columns: 50px, 750px;
+     grid-template-rows: repeat(4, 60px);
+ }
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+
+/*Imagem do Luigi quando clica no "Sobre Mim"*/
+#imagemSobreMim{
+    height: 300px;
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 14;
+    grid-row-end: 15;
+    visibility: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background-image: url("Imagens/Super Mario World - Background.gif");
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position-y: bottom;
+    text-align: center;
+}
+
+p{color: cyan;}
+
+/*Definindo fundo para os botões*/
+button{ display: inline;
+    background-size: cover;
+    background-image: url("Imagens/Super Mario Bros - Mystery Box.jpg");
+    color: black;
+    border-color: rgb(120, 14, 128);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 20%;
+}
+
+/*Posicionando botões*/
+#sobre-mim{
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#formacao{
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#portfolio{
+    grid-column-start: 14;
+    grid-column-end: 17;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#contatos{
+    grid-column-start: 18;
+    grid-column-end: 21;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+/*Fundo transparente para o texto*/
+h1{background-color: rgba(70, 47, 79, 0.8);
+    grid-column-start: 3;
+    grid-row-start: 4;
+    grid-column-end: 24;
+    grid-row-end: 21;
+}
+
+/*Pontos quando clica no ícone com a foto minha*/
+#pontos{
+    width: 50px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+
+#pontosDigitos{
+    font-family: 'Times New Roman', Times, serif;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 3;
+    grid-row-end: 5;
+    font-size: larger;
+    color:aliceblue;
+}
+
+/*Boneco que se mexe no Canto Superior Direito*/
+#icone{
+    width: 100px;
+    padding-top: 10px;
+    grid-column-start: 24;
+    grid-column-end: 25;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#titulo{color: rgb(106, 255, 80);
+    font-size: x-large;
+    grid-column-start: 9;
+    grid-column-end: 18;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#texto{ 
+    grid-column-start: 6;
+    grid-row-start: 6;
+    grid-column-end: 21;
+    grid-row-end: 7;
+}
+
+#texto::first-letter{
+    padding-left: 25px;
+}
+
+/*Estilizando Subtitulos*/
+h4{
+    padding-left: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(255, 242, 0);
+}
+
+/*Subtextos*/
+#meuIcone{
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+/*Informações sobre o botão "Meu Icone"*/
+#infoMeuIcone{
+    padding-top: 15px;
+    grid-column-start: 7;
+    grid-row-start: 9;
+    grid-column-end: 22;
+    grid-row-end: 10;
+}
+
+#trocarFundo{
+    padding-left: 15px;
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+
+#infoTrocarFundo{
+    padding-top: 15px;
+    padding-left: 10px;
+    grid-column-start: 8;
+    grid-row-start: 11;
+    grid-column-end: 22;
+    grid-row-end: 12;
+}
+
+/*Titulo da tabela*/
+#titulo2{
+    text-align: center;
+    color: brown;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    grid-column-start: 10;
+    grid-row-start: 13;
+    grid-column-end: 18;
+    grid-row-end: 25;
+}
+
+/*Tabela*/
+table{
+    grid-column-start: 9;
+    grid-row-start: 14;
+    grid-column-end: 19;
+    grid-row-end: 19;
+}
+
+ul{
+    font-family:Verdana, 'Geneva', Tahoma, sans-serif;
+    grid-column-start: 10;
+    grid-column-end: 18;
+    grid-row-start: 14;
+    grid-row-end: 19;
+}
+
+ul > p{
+    color: rgb(232, 20, 20);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+ul > li{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 20px;
+    padding-left: 15px;
+    font-size:smaller;
+    display: inline;
+    color: rgb(43, 255, 0);
+    text-align: center;
+}
+
+ul > #listaSobreMim{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+ul > #listaFormacao{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+ul > #listaPortfolio{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+ul > #listaContatos{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+ul > #listaInfoSobreMim{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+ul > #listaInfoFormacao{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+ul > #listaInfoPortfolio{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+ul > #listaInfoContatos{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#legenda{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    color: black;
+    visibility: hidden;
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: 18;
+    grid-row-end: 21;
+    margin-bottom: 20px;
+    text-align: left;
+    background-color: aliceblue;
+}
+ 
+ #Eu{   
+     width: 100px;
+     grid-column-start: 1;
+     grid-row-start: 1;
+     grid-column-end: 2;
+     grid-row-end: 2;
+     border-radius: 50%;
+ }
+ 
+ #botao1{
+     grid-column-start: 21;
+     grid-column-end: 22;
+     grid-row-start: 25;
+     grid-row-end: 26;
+ }
+ 
+ #botao2{
+     grid-column-start: 23;
+     grid-column-end: 24;
+     grid-row-start: 25;
+     grid-row-end: 26;
+ }
+ 
+ #botao3{
+     grid-column-start: 25;
+     grid-column-end: 25;
+     grid-row-start: 25;
+     grid-row-end: 26;
+ }
+
+ /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+/*Quando colocar o mouse em cima, o cursor vai mudar para "cursor de clique"*/
+ button:hover{
+    cursor:pointer;
+ }

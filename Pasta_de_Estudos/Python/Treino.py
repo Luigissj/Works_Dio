@@ -1,1 +1,2 @@
-print (hex(12323)[2:])
+imprime= "arroz"
+print(imprime)
